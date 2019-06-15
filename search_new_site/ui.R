@@ -15,15 +15,25 @@ shinyUI(bootstrapPage(
                             selected = "1",
                             multiple = T
                 )
+                
   ),
   absolutePanel(top = 10, right = 50,
                 searchInput(
                   inputId = "addr",
-                  label = "Click search icon", 
+                  label = "Click search icon",
+                  value = "수원시 영통구 영통동 1052-2",
                   placeholder = "주소를 입력하세요.",
                   btnSearch = icon("search"), 
                   btnReset = icon("remove"),
-                  width = 300
+                  width = 300)),
+  absolutePanel(right = 20, bottom = 80,
+                actionBttn(
+                  inputId = "view_around",
+                  label = "주변보기", 
+                  style = "stretch",
+                  color = "primary",
+                  icon = icon("binoculars"),
+                  size = "sm"
                 ))
 )
 

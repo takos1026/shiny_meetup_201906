@@ -9,9 +9,6 @@ library(jsonlite)
 library(sp)
 
 
-api_key <- "65c3453db582c1a3e7c1465d1b6910a2takos1026"
-url_addr <- "https://dapi.kakao.com/v2/local/search/address.json"
-url_ctgr <- "https://dapi.kakao.com/v2/local/search/category.json"
 
 
 sw_station <- readRDS("data/sw_clustr_result.rds")
