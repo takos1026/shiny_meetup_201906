@@ -171,7 +171,8 @@ function(input, output, session){
         pat <- searchaddr()$around %>% filter(indsSclsCd == "S04A02") 
         kindergarten <- searchaddr()$around %>% filter(indsSclsCd == "R08A02") 
         drink <- searchaddr()$around %>% filter(indsMclsCd == "Q09") 
-
+        hair <- searchaddr()$around %>% filter(indsSclsCd == "F01A01")
+        cvs <- searchaddr()$around %>% filter(indsSclsCd == "D03A01")
 
         leafletProxy("map") %>% 
             #clearMarkers() %>%
@@ -215,9 +216,21 @@ function(input, output, session){
                               lat = ~lat,
                               icon = awesomeIcons(icon = "beer", library = "fa", iconColor = "black", markerColor = "orange"),
                               group = "유흥주점") %>%
+            addAwesomeMarkers(data = hair,
+                              lng = ~lon,
+                              lat = ~lat,
+                              icon = awesomeIcons(icon = "cut", library = "fa", iconColor = "white", markerColor = "purple", iconRotate = 270),
+                              group = "미용실") %>%
+            addAwesomeMarkers(data = cvs,
+                              lng = ~lon,
+                              lat = ~lat,
+                              icon = awesomeIcons(icon = "archive", library = "fa", iconColor = "white", markerColor = "blue"),
+                              group = "편의점") %>%
+            
             addLayersControl(baseGroups = c("POI"),
-                             overlayGroups = c("병원", "동물병원", "어린이집", "음식점", "카페", "유흥주점"),
+                             overlayGroups = c("병원", "동물병원", "어린이집", "음식점", "카페", "유흥주점", "편의점", "미용실"),
                              position = "bottomright")
+        
             
     })
     
