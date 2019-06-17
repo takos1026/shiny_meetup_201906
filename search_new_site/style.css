@@ -1,0 +1,29 @@
+div.clust {
+  position: fixed;
+  top: 41px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+div.outer1 {
+  position: fixed;
+  top: 41px;
+  left: 0;
+  right: 50%;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+div.outer2 {
+  position: fixed;
+  top: 41px;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
