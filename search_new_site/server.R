@@ -1,7 +1,7 @@
 
 # 
 getAddressInfo <- function(address){
-  api_key <- "65c3453db582c1a3e7c1465d1b6910a2"
+  api_key <- "65c3453db582c1a3e7c1465d1b6910a2takos1026"
   url_addr <- "https://dapi.kakao.com/v2/local/search/address.json"
   
   res <- GET(url = url_addr,
@@ -16,7 +16,7 @@ getAddressInfo <- function(address){
 
 #
 getSwstaionInfo <- function(ctgr_cd = "SW8", lon, lat, radius){
-  api_key <- "65c3453db582c1a3e7c1465d1b6910a2"
+  api_key <- "65c3453db582c1a3e7c1465d1b6910a2takos1026"
   url_ctgr <- "https://dapi.kakao.com/v2/local/search/category.json"
   
   res <- GET(url = url_ctgr,
@@ -41,7 +41,7 @@ getAroundInfo <- function(lon, lat, radius = 1000){
   df <- tibble()
   base_url <- "http://apis.data.go.kr/B553077/api/open/sdsc"
   sub_url <- "/storeListInRadius?" #반경내 업소조회
-  key <- "9qLL3cBCDdLqFa2AeqZXgRa%2FwWLX0IBnJYomFQYSCFRFGg1olNvY9ZkgQebNwGPsC6zsYEZh77GiGyh6kIdZ7w%3D%3D"
+  key <- "9qLL3cBCDdLqFa2AeqZXgRa%2FwWLX0IBnJYomFQYSCFRFGg1olNvY9ZkgQebNwGPsC6zsYEZh77GiGyh6kIdZ7w%3D%3Dtakos1026"
   
   url <- paste0(base_url,
                 sub_url,
